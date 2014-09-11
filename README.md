@@ -9,7 +9,7 @@ To follow along with this demonstration, add `[liberator-util "0.1.0"]` and `[ri
 First, we need to install a dispatcher that extends liberator's representation multimethod to look for a dynamically-scoped encoder for the mime-type, falling back to the provided default if one cannot be found:
 
 ```clj
-(require '[liberator-util.representation :refer [install-map-representation-dispatcher! map-encoder-wrapper]
+(require '[liberator-util.representation :refer [install-map-representation-dispatcher! map-encoder-wrapper]]
          '[cheshire.core :as json])
 
 (def json-mime "application/json")
