@@ -28,7 +28,7 @@ Now, let's define a ring handler using liberator.
 Once we have a handler, we can generate middleware that sets a custom encoder for the json mime-type and wrap our handler in this middleware.
 
 ```clj
-(require '[clojure.str :as str])
+(require '[clojure.string :as str])
 
 (def wrap-loud-encoder (map-encoder-wrapper json-mime (fn [m] (json/encode m (fn [k] (-> k str .toUpperCase))))))
 
